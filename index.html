@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhizCyber</title>
+
+<link rel="stylesheet" href="project3.css">
+</head>
+
+<body>
+
+
+<nav class="navbar">
+    <div class="logo">
+        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/data-protection-3d-icon-png-download-9675950.png">
+        WhizCyber
+    </div>
+
+    <ul class="nav-list">
+        <li><a onclick="showPage('home')">Home</a></li>
+        <li><a onclick="showPage('about')">About Us</a></li>
+        <li><a onclick="showPage('service')">Service</a></li>
+        <li><a href="https://tryhackme.com/">Pricing</a></li>
+        <li><a onclick="showPage('contact')">Contact Us</a></li>
+    </ul>
+</nav>
+
+
+<section id="home" class="page active background firstSection">
+    <div class="box-main">
+
+        <div class="firsthalf">
+            <p class="text-big">ENTER THE URL TO VERIFY</p>
+
+            <button class="btn1">This is Phishing Website</button>
+
+            <p class="text-small">AUTOMATED FEATURE EXTRACTION AND CLASSIFICATION OF PHISHING URL</p>
+            <br>
+            
+            <p class="para">abcdefghijklmnopqrstuvwxyz</p>
+            
+            <br>
+            <input type="text" id="search" placeholder="Enter URL">
+            <button class="btn" id="detectBtn">DETECT PHISHING</button>
+
+            <p id="result"></p>
+        </div>
+
+        <div class="secondhalf">
+            <img src="https://t3.ftcdn.net/jpg/06/42/39/62/360_F_642396242_cHN2icvwcENoTTrBFxhLbYZX6KbOCVmm.jpg">
+        </div>
+
+    </div>
+</section>
+
+
+<section id="about" class="page center">
+    <h1>About Us</h1>
+    <p>This website helps detect phishing URLs.</p>
+    
+</section>
+
+<section id="service" class="page center">
+    <h1>Service</h1>
+    <p>We provide phishing detection tools.</p>
+</section>
+
+<section id="pricing" class="page center">
+    <h1>Pricing</h1>
+     <p>Basic: Free | Pro: ₹499/month</p>
+</section>
+
+<section id="contact" class="page center">
+    <h1>Contact Us</h1>
+    <p>Email: support@whizcyber.com</p>
+    
+</section>
+
+<script src="project3.js"></script>
+</body>
+</html>

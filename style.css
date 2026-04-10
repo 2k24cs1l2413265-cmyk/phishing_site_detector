@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    background:#003153;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list li {
+    list-style: none;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-list a:hover {
+    color: yellow;
+}
+
+
+.page{
+    display:none;
+}
+
+.active{
+    display:block;
+}
+
+
+.background{
+    background: rgba(0,0,0,0.5) url('https://img.freepik.com/premium-vector/abstract-grey-wave-lines-blue-background_1074020-777.jpg');
+    background-size: cover;
+    background-blend-mode:darken;
+}
+
+.firstSection{
+    height:100vh;
+}
+
+.box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    max-width: 70%;
+    margin: auto;
+    height:80%;
+}
+
+.firsthalf{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.para{
+    color:yellow;
+    font-size:25px ;
+    text-align: center;
+}
+.secondhalf img{
+    width: 100%;
+}
+
+
+.text-big{
+    font-size: 40px;
+}
+
+.text-small{
+    font-size:18px;
+}
+
+
+#search{
+    padding:8px ;
+    font-size:17px;
+    border-radius: 8px;
+    margin-top:10px;
+}
+
+
+.btn{
+    padding:8px 20px;
+    margin:5px 3px;
+    border:2px solid white;
+    border-radius: 8px;
+    background:none;
+    color:white;
+    cursor:pointer;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.btn1{
+    padding:8px 20px;
+    margin:5px 3px;
+    border-radius: 8px;
+    background:red;
+    color:white;
+}
+
+
+#result{
+    margin-top:15px;
+    font-size:18px;
+}
+
+.center{
+    text-align:center;
+    padding:100px;
+    color:white;
+}
