@@ -27,26 +27,36 @@ button.addEventListener("click", function () {
     result.innerText = "⏳ Checking...";
     result.style.color = "white";
 
-    setTimeout(() => {
-
-        if (
-            url.includes("@") ||
-            url.includes("login") ||
-            url.includes("verify") ||
-            url.includes("update") ||
-            url.length > 50
-        ) {
-            result.innerText = "❌ Phishing Website Blocked!";
-            result.style.color = "red";
-            window.open(url,"_blank");
-        } else {
-            result.innerText = "✅ Safe Website Opening...";
-            result.style.color = "lightgreen";
-
-            window.open(url, "_blank");
+    fetch('/api/predict', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url: url })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.error) {
+            result.innerText = 'Error: ' + data.error;
+            result.style.color = 'yellow';
+            return;
         }
 
-    }, 1000);
+        if (data.prediction === 'bad') {
+            result.innerText = '❌ ' + data.message;
+            result.style.color = 'red';
+        } else if (data.prediction === 'good') {
+            result.innerText = '✅ ' + data.message + ' Opening...';
+            result.style.color = 'lightgreen';
+            window.open(url, '_blank');
+        } else {
+            result.innerText = data.message || 'Unknown result';
+            result.style.color = 'white';
+        }
+    })
+    .catch(err => {
+        result.innerText = 'Request failed';
+        result.style.color = 'yellow';
+        console.error(err);
+    });
 });
 
 
