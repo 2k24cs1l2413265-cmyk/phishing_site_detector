@@ -3,7 +3,7 @@ import pickle
 import re
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 # Try loading model artifacts if they exist; otherwise fall back to heuristic
 vector = None
@@ -44,7 +44,7 @@ def predict_url(url: str) -> (str, str):
 
 @app.route('/', methods=['GET'])
 def index():
-    return send_from_directory('.', 'index.html')
+    return send_from_directory('templates', 'index.html')
 
 
 @app.route('/api/predict', methods=['POST'])
