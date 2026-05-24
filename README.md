@@ -4,6 +4,7 @@ FastAPI backend + simple frontend to check URLs/text with a pretrained model.
 
 Run locally:
 
+
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
